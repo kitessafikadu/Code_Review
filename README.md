@@ -1,5 +1,3 @@
-"""
-
 # Email Validation Project
 
 This project contains an email validation function implemented in Python.
@@ -18,4 +16,3 @@ python -m unittest tests/test_email_validation.py
 ## Author
 
 Kitessa Fikadu
-"""
