@@ -1,7 +1,7 @@
 import re
 
 def is_valid_email(email):
-    """Checks if an email is valid using regex."""
+    """Checks if an email is valid using regular expression."""
     pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
     return bool(re.match(pattern, email)) 
 
