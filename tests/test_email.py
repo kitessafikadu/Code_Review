@@ -10,6 +10,10 @@ class TestEmailValidation(unittest.TestCase):
         self.assertFalse(is_valid_email("invalid-email"))
         self.assertFalse(is_valid_email("test@.com"))
         self.assertFalse(is_valid_email("@example.com"))
+        self.assertFalse(is_valid_email("test..email@example.com"))  # Multiple dots
+        self.assertFalse(is_valid_email("test@"))  # Missing domain
+        self.assertFalse(is_valid_email("@example.com"))  # Missing local part
+        self.assertFalse(is_valid_email("user@com"))  # Invalid domain format
 
 if __name__ == "__main__":
     unittest.main()
