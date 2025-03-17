@@ -1,11 +1,9 @@
 import re
 
-def is_valid_email(email: str) -> bool:
-    if not email:
-        return False  # Handle None or empty input
-
-    pattern = r"^(?!.*\.\.)([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$"
-    return bool(re.fullmatch(pattern, email))
+def is_valid_email(email):
+    """Checks if an email is valid using regular expression."""
+    pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    return bool(re.match(pattern, email)) 
 
 def main():
     """Handles user input and prints validation results."""
