@@ -10,7 +10,7 @@ This project contains an email validation function implemented in Python.
 ## Running Tests
 
 ```bash
-python -m unittest tests/test_email_validation.py
+python -m unittest tests/test_email.py
 ```
 
 ## Author
