@@ -1,11 +1,21 @@
 import re
 
 def is_valid_email(email: str) -> bool:
+    """
+    Validates an email address using a stricter regular expression.
+    
+    - Ensures the email follows a proper structure.
+    - Uses re.fullmatch() to enforce full-string validation.
+    - Prevents multiple consecutive dots and trailing dots.
+
+    Returns:
+        bool: True if valid, False otherwise.   
+    """
     if not email:
         return False  # Handle None or empty input
 
     pattern = r'^[a-zA-Z0-9]+([._+-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$'
-    return bool(re.match(pattern, email))
+    return bool(re.fullmatch(pattern, email))
 
 def main():
     """Handles user input and prints validation results."""
